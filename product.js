@@ -15,6 +15,7 @@ const productSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true,
+    min: 0,
   },
 });
 
@@ -22,7 +23,7 @@ const Product = mongoose.model("Product", productSchema);
 
 const pizzaPan = new Product({
   name: "Pizza Pan",
-  price: "18.99",
+  price: -20,
 });
 
 pizzaPan
